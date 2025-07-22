@@ -1,0 +1,47 @@
+// ==UserScript==
+// @name         Bouton Cloudya
+// @namespace    http://tampermonkey.net/
+// @version      1.1.1
+// @description  Ajoute un bouton "Bouton Cloudya" avec lien 
+// @author       Pierre
+// @match        https://wspharma.odoo.com/*
+// @match        http://wspharma.odoo.com/*
+// @updateURL    
+// @downloadURL  
+// @grant        none
+// ==/UserScript==
+
+    
+  
+  
+ 
+
+    // === AJOUT BOUTON CLOUDYA ===
+    function ajouterBoutonCloudya() {
+        // Ne pas dupliquer
+        if (document.getElementById('btn-cloudya')) return;
+        // Créer le bouton
+        const btn = document.createElement('button');
+        btn.id = 'btn-cloudya';
+        btn.className = 'btn btn-primary';
+        btn.type = 'button';
+        btn.textContent = 'Cloudya';
+        btn.addEventListener('click', function () {
+    const input = document.querySelector(
+        '.o_field_many2one[name="user_id"] input'
+    );
+
+    if (!input || !input.value) {
+        alert("Aucun utilisateur assigné !");
+        return;
+    }
+
+    const username = input.value.trim();
+    console.log("Nom récupéré :", username);
+
+    // === ADAPTATION ICI ===
+    // S'assurer que le lien correspond bien à ce que Cloudya attend.
+    const lienCloudya = `https://my.cloudya.com/${encodeURIComponent(username)}`;
+    window.open(lienCloudya, '_blank');
+});
+            }
