@@ -6,8 +6,8 @@
 // @author       Pierre
 // @match        https://wspharma.odoo.com/*
 // @match        http://wspharma.odoo.com/*
-// @updateURL    https://github.com/PierreLabet/Hotline/blob/main/Bouton%20Traiter%20l'Appel%20Odoo-2.2.1.user.js
-// @downloadURL  https://github.com/PierreLabet/Hotline/blob/main/Bouton%20Traiter%20l'Appel%20Odoo-2.2.1.user.js
+// @updateURL    https://github.com/PierreLabet/Hotline/blob/main/Odoo%20Bouton%20Traiter%20l'Appel-2.2.1.user.js
+// @downloadURL  https://github.com/PierreLabet/Hotline/blob/main/Odoo%20Bouton%20Traiter%20l'Appel-2.2.1.user.js
 // @grant        none
 // ==/UserScript==
 
